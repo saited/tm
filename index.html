@@ -4,15 +4,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="addtohomescreen.css">
-<script src="addtohomescreen.min.js"></script>
 <script>
-addToHomescreen();
+ var imagesArray = ["http://digital-photography-school.com/wp-content/uploads/flickr/205125227_3f160763a0_o.jpg", "http://www.weisbrodimaging.com/classes/Photo/wp-content/uploads/2015/10/nature-landscape-beautiful-photos-best-desktop-landscape-hd-wallpapers-widescreen.jpg", "http://www.ucreative.com/wp-content/uploads/2014/11/Landscape-Photography-Banner1.jpg"];
+
+function displayImage(){
+    var num = Math.floor(Math.random() * 3); // 0...6
+    document.canvas.src = imagesArray[num];
+}
+
+
 </script>
 </head>
 <body>
 <div style="text-align: center; margin-top: 25%;">
-<button>Click Me</button>
+<img src="blank.jpg" name="canvas" width="100">
+<button onclick="displayImage();">Click Me</button>
 </div>
 </body>
 </html>
